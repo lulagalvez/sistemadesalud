@@ -3,8 +3,8 @@ Proyecto de Sistema de Salud de Ingenieria de Software I y II
 
 # Integrantes
 
-Yerko Reyes
-José Rojas
-Rodolfo Vergara
-Elizabeth Bravo
-Luis Gálvez
+Yerko Reyes  <br/>
+José Rojas <br/>
+Rodolfo Vergara <br/>
+Elizabeth Bravo <br/>
+Luis Gálvez <br/>
