@@ -1,5 +1,6 @@
 package sistemadesalud;
-import java.time.LocalDate;
+import java.time.*;
+
 
 
 public class Tratamiento {
@@ -7,5 +8,10 @@ public class Tratamiento {
     
     public Tratamiento() {
         
+    }
+
+    public int agregarDosis(int med, int cantidad, int duracion) {
+        // agregando dosis
+        return 0;
     }
 }
