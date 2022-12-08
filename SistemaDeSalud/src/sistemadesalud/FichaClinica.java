@@ -16,7 +16,7 @@ public class FichaClinica {
         consultasMedicas = new ArrayList();
     }
 
-    public int agregarConsulta(LocalDateTime fechahora) {
+    public int agregarConsulta(LocalDate fechahora) {
         // agregando consulta
         ConsultaMedica cm = new ConsultaMedica(fechahora);
         this->consultasMedicas.add(cm);

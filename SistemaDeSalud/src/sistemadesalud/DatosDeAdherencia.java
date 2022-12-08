@@ -7,6 +7,7 @@ public class DatosDeAdherencia {
     public DatosDeAdherencia() {
         
     }
-    public Local Date getFecha(){return this->fecha}
+    public LocalDate getFecha(){return this->fecha}
+    
     public int getHora(){return this->hora}
 }

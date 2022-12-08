@@ -2,7 +2,7 @@ package sistemadesalud;
 import java.time.LocalDateTime;
 
 public class ConsultaMedica {
-    private LocalDateTime fechahora;
+    private LocalDate fechahora;
 
     
     public ConsultaMedica() {

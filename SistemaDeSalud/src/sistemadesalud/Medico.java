@@ -17,24 +17,55 @@ public class Medico {
         consultasMedicas = new Vector();
     }
 
-    public int crearFichaClinica(String rut, String[] datos, LocalDateTime fechahora) {
-
+    public void crearFichaClinica(String rut, String[] datos, LocalDate fechahora) {
+        FichaClinica fc = new FichaClinica(rut, datos)
+        fc.agregarConsulta(fechahora);
+        this->fichasclinicas.add(fc);
     }
 
-    public int crearTratamiento(int id_diagnosticoMedico, LocalDateTime fecha) {
-
+    public void crearTratamiento(int id_diagnosticoMedico, LocalDate fecha) {
+        DiagnosticoMedico dm = NULL;
+        for(int i = 0; i < this->diagnosticosMedicos.size();++i){
+            if(this->diagnosticosMedicos[i].getID() == id_diagnosticoMedico){
+                dm = this->diagnosticosMedicos[i];
+            }
+        }
+        if(dm == NULL){
+            dm = new DiagnosticoMedico(id_diagnosticoMedico);
+        }
+        dm.crearTratamiento(fecha);
     }
     // 
-    public int prescribirDosis(int idMed, int cantidad, int duracion, LocalDateTime fecha) {
-        int m = buscar
+    public void prescribirDosis(int idMed, int idDiagnostico,int cantidad, int duracion, int idTratamiento) {
+        Medicamento m = this->catalogo.buscarMedicamento(idMed);
+        DiagnosticoMedico dm = NULL;
+        for(int i = 0; i < this->diagnosticosMedicos.size(); ++i){
+            if(this->diagnosticosMedicos[i].getID() == idDiagnostico){
+                dm = this->diagnosticosMedicos[i];
+            }
+        }
+        dm.agregarDosis(idTratamiento,m,cantidad,duracion);
     }
 
-    public int consultarPorcentajeAdherencia(int idDiagnostico, int idTratamiento, int idDosis, Date f1, Date f2){
+    public double consultarPorcentajeAdherencia(int idDiagnostico, int idTratamiento, int idDosis, LocalDate f1, LocalDate f2){
+        DiagnosticoMedico dm;
+        for(int i = 0; i < this->diagnosticosMedicos.size(); ++i){
+            if(this->diagnosticosMedicos[i].getID() == idDiagnostico){
+                dm = this->diagnosticosMedicos[i];
+            }
+        }
+        return res = dm.adherenciaPuntual(idDosis,idTratamiento.f1.f2)
 
     }
 
-     public int consultarPorcentajeAdherenciaPuntual(int idDiagnostico, int idTratamiento, int idDosis, Date f1, Date f2){
-
+    public double consultarPorcentajeAdherenciaPuntual(int idDiagnostico, int idTratamiento, int idDosis, LocalDate f1, LocalDate f2){
+        DiagnosticoMedico dm;
+        for(int i = 0; i < this->diagnosticosMedicos.size(); ++i){
+            if(this->diagnosticosMedicos[i].getID() == idDiagnostico){
+                dm = this->diagnosticosMedicos[i];
+            }
+        }
+        return res = dm.adherenciaPuntual(idDosis,idTratamiento,f1,f2)
     }
 
 

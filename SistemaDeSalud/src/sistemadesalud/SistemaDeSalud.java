@@ -3,10 +3,10 @@ package sistemadesalud;
 public class SistemaDeSalud {
 
     /**
-     * @param args the command line arguments
+     *  Dejamos el main aca para el futuro. No considerar dentro del trabajo.
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // 
     }
     
 }

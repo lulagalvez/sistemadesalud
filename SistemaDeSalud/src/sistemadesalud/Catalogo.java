@@ -6,9 +6,14 @@ public class Catalogo {
     public Catalogo() {
         listaMedicamentos = new ArrayList();
     }
-    public int buscarMedicamento(int idMed) {
+    public Medicamento buscarMedicamento(int idMed) {
         // Buscando en listaMedicamentos;
-        int med = 0;
+        Medicamento med = NULL;
+        for(int i = 0; i < this->listaMedicamentos.size(); ++i){
+            if(this->listaMedicamentos[i].getID() == idMed){
+                med = this->listaMedicamentos[i];
+            }
+        }
         return med;
     }
 }
