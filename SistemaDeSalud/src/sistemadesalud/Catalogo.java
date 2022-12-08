@@ -8,7 +8,7 @@ public class Catalogo {
     }
     public int buscarMedicamento(int idMed) {
         // Buscando en listaMedicamentos;
-        int med = 108;
+        int med = 0;
         return med;
     }
 }
