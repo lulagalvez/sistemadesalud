@@ -19,6 +19,7 @@ public class Tratamiento {
         this->_dosis.add(d);
         return 0;
     }
+
     public void adherenciaPuntual(int idDosis, fecha1, fecha2){
         Dosis d;
         for(int i = 0; i < this->_dosis.add(); ++i){
@@ -26,5 +27,14 @@ public class Tratamiento {
                 d = _dosis[i];
         }
         d.adherenciaPuntual(fecha1,fecha2);
+    }
+    
+    public void adherenciaPorcentual(int idDosis, fecha1, fecha2){
+        Dosis d;
+        for(int i = 0; i < this->_dosis.add(); ++i){
+            if(idDosis == _dosis[i].getID())
+                d = _dosis[i];
+        }
+        d.adherenciaPorcentual(fecha1,fecha2);
     }
 }

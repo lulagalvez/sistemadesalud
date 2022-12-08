@@ -5,12 +5,16 @@ import java.time.*;
 public class Medico {
     private String rut_medico;
     private Catalogo catalogo;
+    private Vector<ConsultaMedica> consultasMedicas;
     private Vector<DiagnosticoMedico> diagnosticosMedicos;
+    private Vector<FichaClinica> fichasclinicas;
     // Medico recibe catalogo
-    public Medico(String rut_medico, Catalogo catalogo) {
+    public Medico(String rut_medico, Catalogo catalogo, FichaClinica fichasclinicas) {
         this->rut_medico = rut_medico;
         this->catalogo = catalogo;
+        this->fichasclinicas = fichasclinicas;
         diagnosticosMedicos = new Vector();
+        consultasMedicas = new Vector();
     }
 
     public int crearFichaClinica(String rut, String[] datos, LocalDateTime fechahora) {

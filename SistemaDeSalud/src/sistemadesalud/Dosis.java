@@ -20,6 +20,9 @@ public class Dosis {
     public int calcularAdherenciaPuntual(LocalDate fecha1, LocalDate fecha2) {
         // Calculando resultado
         int result = 0;
+        for(int i = 0; i < this->adherencia.size(); ++i){
+            if(this->adherencia[i].getFecha.compareTo(fecha1) >= 0 && this-)
+        }
         return result;
     }
     public double calcularAdherenciaPorcentual(LocalDate fecha1, LocalDate fecha2) {
